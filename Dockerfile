@@ -2,10 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER yujmo  yujmo94@gmail.com
 
-RUN apt-get update && apt-get install openssh-server openssh-client -y 
-
-RUN systemctl enable ssh
-
-RUN echo "admin" | passwd --stdin root
-
-
+RUN apt-get update && apt-get install openssh-server -y \
+    && sed 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config \
+    && RUN systemctl enable ssh \
+    && echo root:admin | chpasswd
