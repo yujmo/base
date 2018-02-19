@@ -6,3 +6,6 @@ RUN apt-get update && apt-get install openssh-server openssh-client -y
 
 RUN systemctl enable ssh
 
+RUN echo "admin" | passwd --stdin root
+
+
