@@ -8,4 +8,6 @@ RUN apt-get update && apt-get install openssh-server python-pip parted  iputils-
     && systemctl enable ssh \
     && useradd -m -s /bin/bash cephuser \
     && echo root:admin | chpasswd \
-    && echo cephuser:admin |chpasswd
+    && echo cephuser:admin |chpasswd \
+    && pip install pip --upgrade \
+    && pip install ceph-deploy
