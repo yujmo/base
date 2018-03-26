@@ -7,8 +7,6 @@ RUN apt-get update && apt-get install openssh-server python-pip parted upstart i
     && echo "cephuser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers \
     && systemctl enable ssh \
     && systemctl mask getty@tty1.service \
-    && useradd -m -s /bin/bash cephuser \
     && echo root:admin | chpasswd \
-    && echo cephuser:admin |chpasswd \
     && pip install pip --upgrade \
-    && pip install ceph-deploy
+ 
