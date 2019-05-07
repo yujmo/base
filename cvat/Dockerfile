@@ -14,9 +14,7 @@ ENV TERM=xterm \
 ENV LANG='C.UTF-8'  \
     LC_ALL='C.UTF-8'
 
-ARG USER
-ARG DJANGO_CONFIGURATION
-ENV DJANGO_CONFIGURATION=${DJANGO_CONFIGURATION}
+ENV DJANGO_CONFIGURATION="production"
 
 # Install necessary apt packages
 RUN apt-get update && \
@@ -47,7 +45,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Add a non-root user
-ENV USER=yujmo
+ENV USER=django
 ENV HOME /home/${USER}
 WORKDIR ${HOME}
 RUN adduser --shell /bin/bash --disabled-password --gecos "" ${USER}
