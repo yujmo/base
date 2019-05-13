@@ -10,12 +10,14 @@
   <a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/npm/l/vue.svg" alt="License"></a>
 </p>
 
-<h2 align="center">ZARA - 下一代前端框架（主标题）</h2>
+<h2 align="center">大宝剑的docker基础镜像</h2>
+<!--
 <p align="center"><b>基于 Web Components 并支持 IE8（简单介绍）</b></p>
+-->
 
 # 目录
 
-- [生态](#生态)
+- [简介](#简介)
 - [必须收藏的资源](#必须收藏的资源)
 - [快速入门](#快速入门)
   - [安装](#安装)
@@ -25,7 +27,7 @@
 - [感谢](#感谢)
 - [License](#license)
 
-## 生态
+## 简介
 
 [→ 生态学习路线图](https://github.com/Tencent/omi/tree/master/assets/rm.md)
 
