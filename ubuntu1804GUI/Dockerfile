@@ -18,4 +18,4 @@ RUN apt-get update && apt-get -y install \
     && systemctl mask getty@tty1.service \
     && echo root:admin | chpasswd
 
-RUN apt-get -y install firefox
+RUN apt-get -y install lxde
