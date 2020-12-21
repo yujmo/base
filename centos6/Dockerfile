@@ -1,6 +1,6 @@
 FROM centos:6
 MAINTAINER yujmo yujmo94@gmail.com
-RUN rm -rf /etc/yum.repos.d/CentOS-[DSfCMV]* \
+RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf \
     && yum clean all && yum update -y \
     && yum install openssh passwd openssl epel-release openssh-clients openssh-server -y \
     && yum clean all && yum update -y \
