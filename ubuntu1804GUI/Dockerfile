@@ -17,3 +17,5 @@ RUN apt-get update && apt-get -y install \
     && /lib/systemd/systemd-sysv-install enable ssh \
     && systemctl mask getty@tty1.service \
     && echo root:admin | chpasswd
+
+RUN apt-get -y install firefox
