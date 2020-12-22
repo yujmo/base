@@ -18,4 +18,4 @@ RUN apt-get update && apt-get -y install \
     && systemctl mask getty@tty1.service \
     && echo root:admin | chpasswd
 
-RUN apt-get -y install lxde
+RUN apt-get -y install x11-apps
