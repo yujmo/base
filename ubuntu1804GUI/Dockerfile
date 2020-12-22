@@ -9,7 +9,7 @@ RUN apt-get update && apt-get -y install \
     python python-pip python3 python3-pip \
     sudo \
     udev \
-    upstart \
+    systemd-sysv \
     vim \
     xfsprogs \
     && sed -i "s/prohibit-password/yes/g" /etc/ssh/sshd_config \
