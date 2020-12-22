@@ -12,6 +12,7 @@ RUN apt-get update && apt-get -y install \
     systemd-sysv \
     vim \
     xfsprogs \
+    x11-apps \
     && sed -i "s/prohibit-password/yes/g" /etc/ssh/sshd_config \
     && sed -i "s/#GatewayPorts no/GatewayPorts yes/g" /etc/ssh/sshd_config \
     && /lib/systemd/systemd-sysv-install enable ssh \
